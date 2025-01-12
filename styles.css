@@ -8,7 +8,7 @@ header{
     padding: 1vw;
     display: flex;
     flex-direction: row;
-    background-color: #BABABA;
+    background-color: #BFBFBF;
 }
 .horLineLogo{
     margin-left: 2vw;
@@ -18,58 +18,86 @@ header{
     size: 100%;
     float: left;
 }
+.headerButtons{
+    display: flex;
+    flex-direction: row;
+}
 .toMainBut{
-    width: 10vw;
-    height: 3vh;
+    width: 20vw;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #9A9A9A;
+    background-color: #8A8A8A;
     border-radius: 5vw;
+    margin: 1vw;
+}
+.toMainBut:hover{
+    transition-duration: 50ms;
+    scale: 1.1;
 }
 .toMainButText{
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 .RandomBut{
-    width: 10vw;
-    height: 3vh;
+    width: 20vw;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #9A9A9A;
+    background-color: #8A8A8A;
     border-radius: 5vw;
+    margin: 1vw;
+}
+.RandomBut:hover{
+    transition-duration: 50ms;
+    scale: 1.1;
 }
 .RandomButText{
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 .cpp_Logo{
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     background-color: #8080FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 10vw;
     height: 10vw;
     border-radius: 3vw;
 }
 .cpp_Text{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding-top: 2.5vw;
-    
+    font-size: 2em;
+    margin: 0; 
+    padding: 0;
 }
-.tipsNtricks_Text{
+.textLogo{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+.tipsNtricks_Text{
+    display: flex;
     margin: 0;
     padding: 0;
+}
+@media (max-width: 950px) {
+    .tipsNtricks_Text { display: none; }
+    .cpp_Text{
+        font-size: 1.5em;
+    }
+    .cpp_Logo{
+        justify-content: space-around;
+    }
 }
 .FeatureBlock{
     margin-top: 2vh;
@@ -78,9 +106,12 @@ header{
     flex-direction: row;
 }
 .codeSample{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: pre-wrap;
     width: 30vw;
     height: fit-content+10px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: 5vw;
     margin-right: 5vw;
     padding: 5px;
