@@ -24,12 +24,12 @@ header{
 }
 .toMainBut{
     width: 20vw;
-    height: 5vh;
+    height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #8A8A8A;
-    border-radius: 5vw;
+    border-radius: 2vw;
     margin: 1vw;
 }
 .toMainBut:hover{
@@ -44,12 +44,12 @@ header{
 }
 .RandomBut{
     width: 20vw;
-    height: 5vh;
+    height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #8A8A8A;
-    border-radius: 5vw;
+    border-radius: 2vw;
     margin: 1vw;
 }
 .RandomBut:hover{
