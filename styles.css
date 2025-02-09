@@ -124,7 +124,7 @@ header{
     margin-left: 5vw;
     margin-right: 5vw;
     padding: 5px;
-    padding-bottom: 5vw;
+    padding-bottom: 3vw;
     border: solid 1px black;
     background-color: #FFFFFF;
     -webkit-touch-callout: none;
@@ -135,8 +135,8 @@ header{
     user-select: none;
 }
 .copyBut{
-    width: 5vw;
-    height: 5vw;
+    width: 3vw;
+    height: 3vw;
     position: absolute;
     margin: 3vw;
     background-color: #8A8A8A;
@@ -144,7 +144,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center; 
-    border-radius: 1vw;
+    border-radius: 0.75vw;
 }
 .copyBut:hover{
     animation-duration: 50ms;
@@ -169,4 +169,5 @@ header{
     padding: 5px;
     margin-left: 5vw;
     margin-right: 5vw;
+    width: 30vw;
 }
