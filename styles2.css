@@ -1,0 +1,227 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    height:calc(100vh - 15vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #E9E9E9;
+}
+header{
+    margin: 0;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #BFBFBF;
+}
+.horLineLogo{
+    margin-left: 2vw;
+    padding: 0;
+    width: 1px;
+    background-color: #000000;
+    size: 100%;
+    float: left;
+}
+.headerButtons{
+    display: flex;
+    flex-direction: row;
+}
+.toMain{
+    width: 20vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8A8A8A;
+    border-radius: 2vw;
+    margin: 1vw;
+}
+.toMain:hover{
+    transition-duration: 50ms;
+    background-color: #7A7A7A;
+    scale: 1.1;
+}
+.toMain:active{
+    animation-duration: 50ms;
+    background-color: #AAAAAA;
+    scale: 0.9;
+}
+.toMainText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.cpp_Logo{
+    margin: 0;
+    padding: 0;
+    background-color: #8080FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 3vw;
+}
+.cpp_Text{
+    display: flex;
+    font-size: 2em;
+    margin: 0; 
+    padding: 0;
+}
+.textLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tipsNtricks_Text{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 950px) {
+    .tipsNtricks_Text { display: none; }
+    .cpp_Text{
+        font-size: 1.5em;
+    }
+    .cpp_Logo{
+        justify-content: space-around;
+    }
+}
+.inputQuests{
+    margin-top: 3vmin;
+    width: fit-content;
+    user-select: none;
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.startButton{
+    width: 50vmin;
+    height: 50vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aaaaaa;
+    border-radius: 10vmin;
+    margin: 1vw;
+}
+.startButton:hover{
+    transition-duration: 50ms;
+    background-color: #8a8a8a;
+    scale: 1.1;
+}
+.startButton:active{
+    animation-duration: 50ms;
+    background-color: #bbbbbb;
+    scale: 0.9;
+}
+.startButtonText{
+    font-size: 5vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.questions{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.timerQst{
+    position: relative;
+    left: 17vmin;
+    font-weight: 600;
+    font-size: 2vmin;
+}
+.question{
+    display: flex;
+    padding: 5vw;
+    padding-top: 0;
+    background-color: #ffffff;
+    border: #000000 solid 2px;
+    border-radius: 1vw;
+    width: 45vmin;
+    height: 45vmin;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.quesText{
+    font-size: 2vmin;
+    height: 80%;
+    user-select: none;
+}
+.bottomInput{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:5px;
+}
+.inputAns{
+    width: 70%;
+}
+.checkBut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aaaaaa;
+    border-radius: 3px;
+    width: 25%;
+}
+.checkBut:hover{
+    transition-duration: 50ms;
+    background-color: #8a8a8a;
+    scale: 1.05;
+}
+.checkBut:active{
+    animation-duration: 50ms;
+    background-color: #bbbbbb;
+    scale: 0.95;
+}
+.checkButText{
+    font-size: 1.5vmin;
+    user-select: none;
+}
+.endResult{
+    display: none;
+    color: #ffffff;
+    /* -webkit-text-stroke: 1px #a0a0a0; */
+    font-size: 1.5vmin;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMjAwMTE3MTUyNV5BMl5BanBnXkFtZTcwNDM1MDUwOA@@._V1_.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2vmin;
+    width: 45vmin;
+    height: 60vmin;
+    user-select: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.results{
+    display: flex;
+    gap: 1vw;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.questRes{
+    padding-top: 35vmin;
+}
+.timeRes{
+    margin: 0;
+}
+.timePerQuestRes{
+    margin: 0;
+}
