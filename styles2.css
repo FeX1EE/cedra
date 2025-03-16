@@ -1,3 +1,19 @@
+:root{
+    --text-color: #000000;
+    --body-color: #E9E9E9;
+    --header-color: #BFBFBF;
+    --lines-color: #000000;
+    --header-buttons: #8A8A8A;
+    --header-buttons-hover: #7A7A7A;
+    --header-buttons-active: #AAAAAA;
+    --main-buttons: #AAAAAA;
+    --main-buttons-hover: #8A8A8A;
+    --main-buttons-active: #BBBBBB;
+    --main-element: #FFFFFF;
+    --main-border: #000000;
+    --main-result: #333333;
+    --cpp-logo: #8080FF;
+}
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -11,20 +27,20 @@ main{
 body{
     padding: 0;
     margin: 0;
-    background-color: #E9E9E9;
+    background-color: var(--body-color);
 }
 header{
     margin: 0;
     padding: 1vw;
     display: flex;
     flex-direction: row;
-    background-color: #BFBFBF;
+    background-color: var(--header-color);
 }
 .horLineLogo{
     margin-left: 2vw;
     padding: 0;
     width: 1px;
-    background-color: #000000;
+    background-color: var(--lines-color);
     size: 100%;
     float: left;
 }
@@ -32,27 +48,79 @@ header{
     display: flex;
     flex-direction: row;
 }
+.swapTheme{
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://cdn2.iconfinder.com/data/icons/essential-user-interface-4/24/dark_mode_moon_night-1024.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--header-buttons);
+    border-radius: 2vw;
+    margin: 1vw;
+}
+.swapTheme:hover{
+    transition-duration: 50ms;
+    background-color: var(--header-buttons-hover);
+    scale: 1.1;
+}
+.swapTheme:active{
+    animation-duration: 50ms;
+    background-color: var(--header-buttons-active);
+    scale: 0.9;
+}
+.toTAT{
+    width: 20vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-buttons);
+    border-radius: 2vw;
+    margin: 1vw;
+}
+.toTAT:hover{
+    transition-duration: 50ms;
+    background-color: var(--header-buttons-hover);
+    scale: 1.1;
+}
+.toTAT:active{
+    animation-duration: 50ms;
+    background-color: var(--header-buttons-active);
+    scale: 0.9;
+}
+.toTATText{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
 .toMain{
     width: 20vw;
     height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8A8A8A;
+    background-color: var(--header-buttons);
     border-radius: 2vw;
     margin: 1vw;
 }
 .toMain:hover{
     transition-duration: 50ms;
-    background-color: #7A7A7A;
+    background-color: var(--header-buttons-hover);
     scale: 1.1;
 }
 .toMain:active{
     animation-duration: 50ms;
-    background-color: #AAAAAA;
+    background-color: var(--header-buttons-active);
     scale: 0.9;
 }
 .toMainText{
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +129,7 @@ header{
 .cpp_Logo{
     margin: 0;
     padding: 0;
-    background-color: #8080FF;
+    background-color: var(--cpp-logo);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +138,7 @@ header{
     border-radius: 3vw;
 }
 .cpp_Text{
+    color: var(--text-color);
     display: flex;
     font-size: 2em;
     margin: 0; 
@@ -82,6 +151,7 @@ header{
     flex-direction: column;
 }
 .tipsNtricks_Text{
+    color: var(--text-color);
     display: flex;
     margin: 0;
     padding: 0;
@@ -111,21 +181,22 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #aaaaaa;
+    background-color: var(--main-buttons);
     border-radius: 10vmin;
     margin: 1vw;
 }
 .startButton:hover{
     transition-duration: 50ms;
-    background-color: #8a8a8a;
+    background-color: var(--main-buttons-hover);
     scale: 1.1;
 }
 .startButton:active{
     animation-duration: 50ms;
-    background-color: #bbbbbb;
+    background-color: var(--main-buttons-active);
     scale: 0.9;
 }
 .startButtonText{
+    color: var(--text-color);
     font-size: 5vmin;
     display: flex;
     align-items: center;
@@ -138,6 +209,7 @@ header{
     align-items: center;
 }
 .timerQst{
+    color: var(--text-color);
     position: relative;
     left: 17vmin;
     font-weight: 600;
@@ -147,8 +219,9 @@ header{
     display: flex;
     padding: 5vw;
     padding-top: 0;
-    background-color: #ffffff;
-    border: #000000 solid 2px;
+    background-color: var(--main-element);
+    border: solid 2px;
+    border-color: var(--main-border);
     border-radius: 1vw;
     width: 45vmin;
     height: 45vmin;
@@ -158,6 +231,7 @@ header{
     
 }
 .quesText{
+    color: var(--text-color);
     font-size: 2vmin;
     height: 80%;
     user-select: none;
@@ -170,38 +244,51 @@ header{
     gap:5px;
 }
 .inputAns{
+    user-select: none;
     width: 70%;
 }
 .checkBut{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #aaaaaa;
+    background-color: var(--main-buttons);
     border-radius: 3px;
     width: 25%;
 }
 .checkBut:hover{
     transition-duration: 50ms;
-    background-color: #8a8a8a;
+    background-color: var(--main-buttons-hover);
     scale: 1.05;
 }
 .checkBut:active{
     animation-duration: 50ms;
-    background-color: #bbbbbb;
+    background-color: var(--main-buttons-active);
     scale: 0.95;
 }
 .checkButText{
+    color: var(--text-color);
     font-size: 1.5vmin;
     user-select: none;
 }
+.topTextRes{
+    color: var(--text-color);
+    font-size:180%;
+}
+.progress{
+    color: var(--text-color);
+}
+.mistRes{
+    color: var(--text-color);
+}
 .endResult{
     display: none;
-    color: #ffffff;
-    /* -webkit-text-stroke: 1px #a0a0a0; */
+    color: var(--main-element);
     font-size: 1.5vmin;
     background-image: url("https://m.media-amazon.com/images/M/MV5BMjAwMTE3MTUyNV5BMl5BanBnXkFtZTcwNDM1MDUwOA@@._V1_.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--main-result);
     border-radius: 2vmin;
     width: 45vmin;
     height: 60vmin;
@@ -217,11 +304,15 @@ header{
     flex-direction: row;
 }
 .questRes{
+    color: var(--text-color);
+    margin: 0;
     padding-top: 35vmin;
 }
 .timeRes{
+    color: var(--text-color);
     margin: 0;
 }
 .timePerQuestRes{
+    color: var(--text-color);
     margin: 0;
 }
