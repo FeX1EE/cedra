@@ -15,6 +15,10 @@ checkBut=document.querySelector(".checkBut")
 timerQst=document.querySelector(".timerQst")
 topTextRes=document.querySelector(".topTextRes")
 swapThemeBut=document.querySelector(".swapTheme")
+pageBut=document.querySelector(".to1Page")
+pageBut.addEventListener("click",function(){
+    window.location.href="indexHTML.html"
+})
 themeLists=[[['--text-color','#000000'],['--body-color','#E9E9E9'],['--header-color','#BFBFBF'],['--lines-color','#000000'],['--header-buttons','#8A8A8A'],['--header-buttons-hover','#7A7A7A'],['--header-buttons-active','#AAAAAA'],['--main-buttons','#AAAAAA'],['--main-buttons-hover','#8A8A8A'],['--main-buttons-active','#BBBBBB'],['--main-element','#FFFFFF'],['--main-border','#000000'],['--main-result','#333333'],['--cpp-logo','#8080FF']],[['--text-color','#FFFFFF'],['--body-color','#252525'],['--header-color','#161616'],['--lines-color','#FFFFFF'],['--header-buttons','#757575'],['--header-buttons-hover','#555555'],['--header-buttons-active','#858585'],['--main-buttons','#555555'],['--main-buttons-hover','#444444'],['--main-buttons-active','#757575'],['--main-element','#161616'],['--main-border','#FFFFFF'],['--main-result','#CCCCCC'],['--cpp-logo','#0000BB']]]
 let theme=0
 function swapThemeFunc(theme){

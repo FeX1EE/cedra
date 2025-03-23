@@ -1,6 +1,33 @@
 let featuresList=document.querySelector(".FeatureBlocks")
 let mainBut = document.querySelector(".toMainBut")
 let randBut = document.querySelector(".RandomBut")
+let pagebut = document.querySelector(".to2PageBut")
+let swapThemeBut = document.querySelector(".swapTheme")
+themeLists=[[['--text-color','#000000'],['--body-color','#E9E9E9'],['--header-color','#BFBFBF'],['--lines-color','#000000'],['--header-buttons','#8A8A8A'],['--header-buttons-hover','#7A7A7A'],['--header-buttons-active','#AAAAAA'],['--main-buttons','#AAAAAA'],['--main-buttons-hover','#8A8A8A'],['--main-buttons-active','#BBBBBB'],['--main-element','#FFFFFF'],['--main-border','000000'],['--cpp-logo','#8080FF']],[['--text-color','#FFFFFF'],['--body-color','#252525'],['--header-color','#161616'],['--lines-color','#FFFFFF'],['--header-buttons','#757575'],['--header-buttons-hover','#555555'],['--header-buttons-active','#858585'],['--main-buttons','#555555'],['--main-buttons-hover','#444444'],['--main-buttons-active','#757575'],['--main-element','#161616'],['--main-border','FFFFFF'],['--cpp-logo','#0000BB']]]
+let theme=0
+function swapThemeFunc(theme){
+    themeList=themeLists[theme]
+    for(let i1=0;i1<themeList.length;++i1){
+        document.documentElement.style.setProperty(themeList[i1][0],themeList[i1][1])
+    }
+    console.log(theme)
+}
+swapThemeBut.addEventListener("click",function(){
+    theme+=1
+    if(theme>1){
+        theme=0
+    }
+    switch(theme)
+    {
+    case 0:
+        swapThemeBut.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/essential-user-interface-4/24/dark_mode_moon_night-1024.png')"
+        break
+    case 1:
+        swapThemeBut.style.backgroundImage="url('https://cdn4.iconfinder.com/data/icons/camping-hiking-thick-outline/33/sun-512.png')"
+        break
+    }
+    swapThemeFunc(theme)
+})
 // let featureList=[['code1\nforx','explanation1'],['code2\nforx','explanation2'],['code3\nforx','explanation3'],['code4','explanation4'],['code5','explanation5'],['code6','explanation6'],['code7\nforx','explanation7'],['code8','explanation8'],['code9','explanation9'],['code10','explanation10']]
 let featureList=[]
 if(localStorage.getItem("codes")==null)
@@ -82,6 +109,9 @@ mainBut.addEventListener("click",function(){
     }
 })
 let Nbt=0
+pagebut.addEventListener("click",function(){
+    window.location.href="HTML2.html"
+})
 randBut.addEventListener("click",function(){
     featuresList.replaceChildren('')
     let Rnum = Math.floor((Math.random() * (featureList.length-1)))

@@ -72,7 +72,7 @@ header{
     background-color: var(--header-buttons-active);
     scale: 0.9;
 }
-.toTAT{
+.to1Page{
     width: 20vw;
     height: 5vw;
     display: flex;
@@ -82,17 +82,17 @@ header{
     border-radius: 2vw;
     margin: 1vw;
 }
-.toTAT:hover{
+.to1Page:hover{
     transition-duration: 50ms;
     background-color: var(--header-buttons-hover);
     scale: 1.1;
 }
-.toTAT:active{
+.to1Page:active{
     animation-duration: 50ms;
     background-color: var(--header-buttons-active);
     scale: 0.9;
 }
-.toTATText{
+.to1PageText{
     color: var(--text-color);
     display: flex;
     align-items: center;

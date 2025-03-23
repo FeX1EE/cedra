@@ -1,20 +1,38 @@
+:root{
+    --text-color: #000000;
+    --body-color: #E9E9E9;
+    --header-color: #BFBFBF;
+    --lines-color: #000000;
+    --header-buttons: #8A8A8A;
+    --header-buttons-hover: #7A7A7A;
+    --header-buttons-active: #AAAAAA;
+    --main-buttons: #AAAAAA;
+    --main-buttons-hover: #8A8A8A;
+    --main-buttons-active: #BBBBBB;
+    --main-element: #FFFFFF;
+    --main-border: #000000;
+    --cpp-logo: #8080FF;
+}
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body{
     padding: 0;
     margin: 0;
-    background-color: #E9E9E9;
+    background-color: var(--body-color);
 }
 header{
     margin: 0;
     padding: 1vw;
     display: flex;
     flex-direction: row;
-    background-color: #BFBFBF;
+    background-color: var(--header-color);
 }
 .horLineLogo{
     margin-left: 2vw;
     padding: 0;
     width: 1px;
-    background-color: #000000;
+    background-color: var(--lines-color);
     size: 100%;
     float: left;
 }
@@ -22,22 +40,79 @@ header{
     display: flex;
     flex-direction: row;
 }
+.swapTheme{
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://cdn2.iconfinder.com/data/icons/essential-user-interface-4/24/dark_mode_moon_night-1024.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--header-buttons);
+    border-radius: 2vw;
+    margin: 1vw;
+}
+.swapTheme:hover{
+    transition-duration: 50ms;
+    background-color: var(--header-buttons-hover);
+    scale: 1.1;
+}
+.swapTheme:active{
+    animation-duration: 50ms;
+    background-color: var(--header-buttons-active);
+    scale: 0.9;
+}
+.to2PageBut{
+    width: 20vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-buttons);
+    border-radius: 2vw;
+    margin: 1vw;
+}
+.to2PageBut:hover{
+    transition-duration: 50ms;
+    background-color: var(--header-buttons-hover);
+    scale: 1.1;
+}
+.to2PageBut:active{
+    animation-duration: 50ms;
+    background-color: var(--header-buttons-active);
+    scale: 0.9;
+}
+.to2PageButText{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
 .toMainBut{
     width: 20vw;
     height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8A8A8A;
+    background-color: var(--header-buttons);
     border-radius: 2vw;
     margin: 1vw;
 }
 .toMainBut:hover{
     transition-duration: 50ms;
-    background-color: #7A7A7A;
+    background-color: var(--header-buttons);
     scale: 1.1;
 }
+.toMainBut:active{
+    animation-duration: 50ms;
+    background-color: var(--header-buttons-active);
+    scale: 0.9;
+}
 .toMainButText{
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,16 +124,22 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8A8A8A;
+    background-color: var(--header-buttons);
     border-radius: 2vw;
     margin: 1vw;
 }
 .RandomBut:hover{
     transition-duration: 50ms;
-    background-color: #7A7A7A;
+    background-color: var(--header-buttons-hover);
     scale: 1.1;
 }
+.RandomBut:active{
+    animation-duration: 50ms;
+    background-color: var(--header-buttons-active);
+    scale: 0.9;
+}
 .RandomButText{
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +148,7 @@ header{
 .cpp_Logo{
     margin: 0;
     padding: 0;
-    background-color: #8080FF;
+    background-color: var(--cpp-logo);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,6 +157,7 @@ header{
     border-radius: 3vw;
 }
 .cpp_Text{
+    color: var(--text-color);
     display: flex;
     font-size: 2em;
     margin: 0; 
@@ -88,6 +170,7 @@ header{
     flex-direction: column;
 }
 .tipsNtricks_Text{
+    color: var(--text-color);
     display: flex;
     margin: 0;
     padding: 0;
@@ -108,6 +191,7 @@ header{
     flex-direction: row;
 }
 .FeatureBlockCode{
+    color: var(--text-color);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -115,6 +199,7 @@ header{
     align-items: end;
 }
 .codeSample{
+    color: var(--text-color);
     display: flex;
     flex-wrap: wrap;
     white-space: pre-wrap;
@@ -125,8 +210,9 @@ header{
     margin-right: 5vw;
     padding: 5px;
     padding-bottom: 3vw;
-    border: solid 1px black;
-    background-color: #FFFFFF;
+    border: solid 1px;
+    border-color: var(--main-border);
+    background-color: var(--main-element);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -139,7 +225,7 @@ header{
     height: 3vw;
     position: absolute;
     margin: 3vw;
-    background-color: #8A8A8A;
+    background-color: var(--main-buttons);
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ic_content_copy_48px.svg/1200px-Ic_content_copy_48px.svg.png');
     background-size: cover;
     background-repeat: no-repeat; 
@@ -148,23 +234,24 @@ header{
 }
 .copyBut:hover{
     animation-duration: 50ms;
-    background-color: #7A7A7A;
+    background-color: var(--main-buttons-hover);
     scale: 1.1;
 }
 .copyBut:active{
     animation-duration: 50ms;
-    background-color: #AAAAAA;
+    background-color: var(--main-buttons-active);
     scale: 0.9;
 }
 .horLine{
     padding: 0;
     margin: 0;
     width: 1px;
-    background-color: #000000;
+    background-color: var(--lines-color);
     size: 100%;
     float: left;
 }
 .ExplText{
+    color: var(--text-color);
     justify-content: center;
     padding: 5px;
     margin-left: 5vw;
